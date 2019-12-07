@@ -1,0 +1,46 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+#banner {
+    margin-top:30px;
+    text-align: center;
+    width:1600px;
+    height:680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#banner .imga {
+    display:none;
+}
+#banner .img .active {
+    display:block;
+    width: 1600px;
+    height:680px;
+    
+}
+#banner .title {
+    width:;
+    height:16px;
+    background-color:rgba(226,226,226,0.6);
+    border-radius:30px;
+    margin-top:-35px;
+    float:left;
+    margin-left:45%;
+    margin-right:45%;
+    padding:6px 0px 0px 10px;
+    position:relative;
+}
+#banner .title .nr {
+    list-style:none;
+    width:10px;
+    height:10px;
+    background:#fff;
+    border-radius:10px;
+    float:left;
+    margin-right:10px;
+    margin-bottom:0px;
+}
+#banner .title .active {
+    background:#db192a;
+}

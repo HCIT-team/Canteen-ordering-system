@@ -1,60 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>首页轮播图</title>
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/nav_bar.css">
+    <link rel="stylesheet" href="css/index.css">
 
-    <style type="text/css">
-        * {
-            margin:0px;
-            padding:0px;
-        }
-        #banner {
-            margin-top:30px;
-            text-align: center;
-            width:1600px;
-            height:680px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        #banner .imga {
-            display:none;
-        }
-        #banner .img .active {
-            display:block;
-            width: 1600px;
-            height:680px;
-            
-        }
-        #banner .title {
-            width:;
-            height:16px;
-            background-color:rgba(226,226,226,0.6);
-            border-radius:30px;
-            margin-top:-35px;
-            float:left;
-            margin-left:45%;
-            margin-right:45%;
-            padding:6px 0px 0px 10px;
-            position:relative;
-        }
-        #banner .title .nr {
-            list-style:none;
-            width:10px;
-            height:10px;
-            background:#fff;
-            border-radius:10px;
-            float:left;
-            margin-right:10px;
-            margin-bottom:0px;
-        }
-        #banner .title .active {
-            background:#db192a;
-        }
-
-    </style>
     <script type="text/javascript">
-        window.onload = function() {
+        window.onload = function () {
             banner('#banner', '.nr', '.imga')
 
             function banner(parent, controller, mod) {
@@ -86,7 +41,7 @@
                     //给控制器加个索引,并把i值赋值给索引
                     controller[i].index = i;
                     //给所有的控制器都加划过事件
-                    controller[i].onmouseover = function() {
+                    controller[i].onmouseover = function () {
                         for (var j = 0; j < controller.length; j++) {
                             //将所有控制器改为默认样式
                             controller[j].className = 'nr';
@@ -103,11 +58,11 @@
                 }
                 //}
                 //绑定鼠标移入,暂停播放图片
-                banner.onmouseover = function() {
+                banner.onmouseover = function () {
                     clearInterval(auto);
                 }
                 //绑定鼠标离开,继续播放
-                banner.onmouseleave = function() {
+                banner.onmouseleave = function () {
                     autoPlay();
                 }
                 //指定播放那个图片
@@ -123,7 +78,7 @@
                 }
                 //自动播放
                 function autoPlay() {
-                    auto = setInterval(function() {
+                    auto = setInterval(function () {
                         if (num > imgNum) {
                             num = 0;
                         }
@@ -138,6 +93,25 @@
 </head>
 
 <body>
+    <div class="nav_bar">
+        <center>
+            
+                <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">所有菜品</a>
+                    <ul>
+                        <li><a href="#">今日热卖</a></li>
+                        <li><a href="#">推荐菜品</a></li>
+                    </ul>
+                </li>
+            
+                    <li class="nav_right"><a href="#">我的订单</a></li>
+                    <li class="nav_right"><a href="#">订单统计</a></li>
+                    <li class="nav_right"><a href="#">购物车</a></li>
+            </ul>
+        </center>
+    </div>
+
     <div id="banner">
         <div class="img">
             <img src="img/img1.png" class="imga active">
@@ -159,4 +133,5 @@
         </ul>
     </div>
 </body>
+
 </html>
