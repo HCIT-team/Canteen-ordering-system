@@ -3,15 +3,20 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>首页轮播图</title>
+    <title>首页</title>
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/nav_bar.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/display.css">
+
+
 
     <script type="text/javascript">
-        window.onload = function () {
-            banner('#banner', '.nr', '.imga')
 
+        var imgnum = 0;
+        window.onload = function () {
+            banner('#banner', '.nr', '.imga');
+            //setInterval("changeurl()", 1000);
             function banner(parent, controller, mod) {
 
                 var num = 0;
@@ -86,8 +91,25 @@
                         num++;
                     }, autoPlayTime)
                 }
-            }
+            }   
         }
+        function changeurl(line) {
+                    var imgurl = ["img/img2.png", "img/img3.png","img/img4.png","img/img5.png","img/img6.png","img/img7.png"];
+                    if(line == 1){
+                        document.getElementById("img1.1").src = imgurl[imgnum];
+                        document.getElementById("img1.2").src = imgurl[imgnum+1];
+                        document.getElementById("img1.3").src = imgurl[imgnum+2];
+                        imgnum = ((imgnum+1)%2)*3;
+                    }
+                    if(line ==2) {
+                        document.getElementById("img2.1").src = imgurl[imgnum];
+                        document.getElementById("img2.2").src = imgurl[imgnum+1];
+                        document.getElementById("img2.3").src = imgurl[imgnum+2];
+                        imgnum = ((imgnum+1)%2)*3;
+                    }
+                    
+
+                }
     </script>
 
 </head>
@@ -131,6 +153,114 @@
             <li class="nr"></li>
             <li class="nr"></li>
         </ul>
+    </div>
+    <div id="display">
+        <div style=" display: flex; height: 50px; background-color: #B3D52B; align-items: center;">
+            <p style="color: white; font-family: sans-serif; font-size: 150%;text-align: center;">
+                Dish display
+            </p>
+        </div>
+        <div class="box" id="box_1">
+            <div >    
+                <table>
+                    <tr>
+                        <td>
+                            <div class="prevdiv" >
+                            
+                                  菜<br>品<br>种<br>类
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dish">
+                                
+                                <img id="img1.1" src="img/img6.png">
+                                <div class="dishdiv">
+                                    <p>dish 1</p>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="dish">
+                                <img id="img1.2" src="img/img5.png">
+                                <div class="dishdiv">
+                                    <p>dish 2</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dish">
+                                <img id="img1.3" src="img/img3.png">
+                                <div class="dishdiv">
+                                    <p>dish 3</p>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="nextdiv">
+                                <img src="img/next.png" onclick="changeurl(1)">
+                                
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+        <div class="box" id="box_2">
+            <div >    
+                <table>
+                    <tr>
+                        <td>
+                            <div class="prevdiv">
+                                菜<br>品<br>种<br>类
+                                
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dish">
+                                
+                                <img id="img2.1" src="img/img6.png">
+                                <div class="dishdiv">
+                                    <p>dish 1</p>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="dish">
+                                <img id="img2.2" src="img/img5.png">
+                                <div class="dishdiv">
+                                    <p>dish 2</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dish">
+                                <img id="img2.3" src="img/img3.png">
+                                <div class="dishdiv">
+                                    <p>dish 3</p>
+                                </div>
+                            </div>
+
+                        </td>
+                        <td>
+                            <div class="nextdiv">
+                                <img src="img/next.png" onclick="changeurl(2)">
+                                
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        </div>
+
     </div>
 </body>
 
