@@ -1,0 +1,37 @@
+.topbar-info{
+	float: right;
+    height: 40px;
+    line-height: 40px;
+}
+.topbar-info a{
+	padding: 0 5px;
+    text-align: center;
+}
+.topbar-info span{
+	margin: 0px;
+	color: #424242;
+    line-height: 40px;
+    font-family: sans-serif;
+}
+.topbar-info .sep{
+    padding: 0 20px 0 6px;
+}
+.header-logo{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 62px;
+    height: 55px;
+    margin-top: 22px;
+}
+.header-logo a{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    transform: translate3d(0, 0, 0);
+    background: #ff6700 url(../img/uestc-logo.png) no-repeat 50% 50%;
+}
+.header-logo .lr{
+    text-align: left;
+    text-indent: -999em;
+}
