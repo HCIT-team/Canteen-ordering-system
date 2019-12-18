@@ -353,3 +353,39 @@ font-size: 30px;
     border-color: #ff6700 !important;
     background-color: #ff6700 !important;
 }
+.foodLi div{
+    transition: 0.25s ease-in-out;
+}
+.foodLi div:hover{
+    transition: 0.25s ease-in-out;
+    transform: scale(1.1,1.1);
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1)
+}
+.topbar-info a{
+    transition: 0.25s ease-in-out;
+}
+.topbar-info a:hover{
+    transition: 0.25s ease-in-out;
+    font-size: 120%;
+    transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2)
+}
+.topbar-info2 a{
+    transition: 0.25s ease-in-out;
+}
+.topbar-info2 a:hover{
+    transition: 0.25s ease-in-out;
+    font-size: 120%;
+    transform: scale(1.2,1.2);
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    cursor: pointer
+}
