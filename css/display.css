@@ -15,7 +15,7 @@
         
         .dish {
             height: 220px;
-            width: 360px;
+            width: 370px;
             border-radius: 10px;
             overflow: hidden;
             position: relative;
@@ -24,16 +24,27 @@
 
         .dish img{
             height: 180px;
-            width: 360px;
-           
+            width: 370px;
+            cursor: pointer;
+            /* transition:transform 0.5s; */
 
         }
+        /* .dish img :hover {
+            
+            transition:scale(1.5);
+
+        } */
         .dish p{
             width: 100%;
             color: black;
             font-size: 20px;
             text-align: center;
             font-weight: bold;
+
+        }
+        .dish p:hover {
+            background-color: rgb(243, 155, 132);
+            border-radius:2em;
 
         }
 
@@ -48,7 +59,7 @@
 
         	
         	height: 215px;
-        	width: 60px;
+        	width: 70px;
         	text-align: center;
         	font-size: 35px;
         	line-height: 50px;
@@ -68,7 +79,8 @@
 
         .nextdiv img{
         	height: 50px;
-        	width: 50px;
+            width: 50px;
+            
         }
 
         .box{
