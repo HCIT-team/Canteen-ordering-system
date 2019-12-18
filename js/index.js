@@ -66,6 +66,7 @@ window.onload = function () {
     var myDate = new Date();
     for (var i = 0; i < aData.length; i++) {
         var oLi = document.createElement("li");
+        oLi.className="foodLi";
         var data = aData[i];
 
         oLi.innerHTML += '<div class="pro_img"><img src="' + data["imgUrl"] + '" width="150" height="150"></div>';
@@ -85,7 +86,7 @@ window.onload = function () {
             var oDiv = document.createElement("div");
             var data = aData[this.index];
             oDiv.className = "row hid";
-            oDiv.innerHTML += '<div class="check left"> <i class="i_check" id="i_check" onclick="i_check()" >√</i></div>';
+            oDiv.innerHTML += '<div class="check left"> <i class="i_check i_acity" id="i_check" onclick="i_check()" >√</i></div>';
             oDiv.innerHTML += '<div class="img left"><img src="' + data["imgUrl"] + '" width="80" height="80"></div>';
             oDiv.innerHTML += '<div class="name left"><span>' + data["proName"] + '</span></div>';
             oDiv.innerHTML += '<div class="price left"><span>' + data["proPrice"] + '元</span></div>';
@@ -93,6 +94,7 @@ window.onload = function () {
             oDiv.innerHTML += '<div class="subtotal left"><span>' + data["proPrice"] + '元</span></div>'
             oDiv.innerHTML += '<div class="ctrl left"><a href="javascript:;">×</a></div>';
             oCar.appendChild(oDiv);
+            getAmount();
             var flag = true;
             var check = oDiv.firstChild.getElementsByTagName("i")[0];
             check.onclick = function () {
