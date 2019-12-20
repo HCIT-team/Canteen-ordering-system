@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "微软雅黑";
+    font-family: "等线";
     list-style: none;
     color: #666;
     text-decoration: none;
@@ -43,7 +43,7 @@ background-color: #ff6700;
 }
 .header-title {
 float: left;
-margin-top: 26px;
+margin-top: 36px;
 font-size: 12px;
 cursor: pointer;
 }

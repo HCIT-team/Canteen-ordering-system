@@ -3,10 +3,11 @@
 }
 .chart {
     margin-top: 26.67px; 
-    width: 1600px; 
+    /* width: 1600px;  */
     height: 450px;
     border-bottom: solid;
     border-color: gray;
+    text-align:center;
 }
 
 .rank_father_div {

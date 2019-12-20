@@ -66,7 +66,7 @@ window.onload = function () {
     var myDate = new Date();
     for (var i = 0; i < aData.length; i++) {
         var oLi = document.createElement("li");
-        oLi.className="foodLi";
+        oLi.className = "foodLi";
         var data = aData[i];
 
         oLi.innerHTML += '<div class="pro_img"><img src="' + data["imgUrl"] + '" width="150" height="150"></div>';
@@ -98,7 +98,7 @@ window.onload = function () {
             var flag = true;
             var check = oDiv.firstChild.getElementsByTagName("i")[0];
             check.onclick = function () {
-                // console.log(check.className);
+                // 
                 if (check.className == "i_check i_acity") {
                     check.classList.remove("i_acity");
 
@@ -126,7 +126,7 @@ window.onload = function () {
                     pt = this.parentElement.parentElement.previousElementSibling;
                     //获取数量值
                     node = bt.parentNode.childNodes[1];
-                    console.log(node);
+
                     num = node.innerText;
                     num = parseInt(num);
                     num++;
@@ -181,6 +181,7 @@ window.onload = function () {
             subBtn.onclick = function () {
                 flag = 0;
                 var j = 0;
+                var count = 0;
                 for (var j = 0;; j++) {
                     allMean = "allMean" + j;
                     if (localStorage.getItem(allMean) == undefined) {
@@ -198,24 +199,27 @@ window.onload = function () {
                         data: myDate.toLocaleString()
                     };
                     temp_contentStr = JSON.stringify(temp_content2);
-                    console.log("54" + temp_contentStr);
+
 
 
                     if (localStorage.getItem(allMean) == undefined) {
                         localStorage.setItem(allMean, temp_contentStr);
                     } else {
                         temp_str = localStorage.getItem(allMean);
-                        console.log("1" + temp_str);
+
                         temp_str += temp_contentStr;
-                        console.log("2" + temp_str);
+
                         localStorage.setItem(allMean, temp_str);
                     }
+                    count++;
                 }
+                if (count == 0) {
+                    alert("您没有选项任何菜品！");
+                } else {
 
-
-                window.location.reload();
-                alert("订单提交成功，请前往“我的订单查看”");
-
+                    window.location.reload();
+                    alert("订单提交成功，请前往“我的订单查看”");
+                }
             }
 
 
@@ -240,7 +244,7 @@ var index = false;
 
 function checkAll() {
     var choose = document.getElementById("car").getElementsByTagName("i");
-    // console.log(choose);
+    // 
     if (choose.length != 1) {
         for (i = 1; i < choose.length; i++) {
             if (!index) {
@@ -258,9 +262,9 @@ function checkAll() {
 
 //进行价格合计
 function getAmount() {
-    // console.log(ys);
+    // 
     ns = document.getElementsByClassName("i_acity");
-    console.log(ns);
+
     sum = 0;
     //选中框
     document.getElementById("price_num").innerText = sum;

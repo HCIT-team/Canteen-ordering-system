@@ -1,0 +1,273 @@
+html,
+body {
+    background-color: #f0f2fa;
+    font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    color: #555f77;
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+textarea {
+    outline: none;
+    border: none;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    font-family: "PT Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 1rem;
+    color: #555f77;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #ced2db;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #ced2db;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #ced2db;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #ced2db;
+}
+
+p {
+    line-height: 1.3125rem;
+}
+
+.means {
+    margin: 2.5rem auto 0;
+    max-width: 60.75rem;
+    padding: 0 1.25rem;
+}
+
+.mean-wrap {
+    margin-bottom: 1.25rem;
+    display: table;
+    width: 100%;
+    min-height: 5.3125rem;
+
+}
+
+.mean-wrap div{
+    transition: 0.25s ease-in-out;
+
+}
+
+.mean-wrap div:hover{
+    transition: 0.25s ease-in-out;
+    /* font-size: 120%; */
+    transform: scale(1.02,1.02);
+    /* -webkit-transform: scale(1.01,1.01); */
+    /* -moz-transform: scale(1.01,1.01); */
+    /* -o-transform: scale(1.01,1.01); */
+    /* -ms-transform: scale(1.01,1.01); */
+}
+.mean-block div:hover{
+    transform:none;
+}
+.photo {
+    padding-top: 0.625rem;
+    display: table-cell;
+    width: 3.5rem;
+}
+
+.photo .avatar {
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 50%;
+    background-size: contain;
+}
+
+.mean-block {
+    padding: 1rem;
+    background-color: #fff;
+    display: table-cell;
+    vertical-align: top;
+    border-radius: 0.1875rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.mean-block textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+.mean-text {
+    margin-bottom: 1.25rem;
+}
+
+.bottom-mean {
+    color: #acb4c2;
+    font-size: 0.875rem;
+}
+
+.mean-date {
+    float: left;
+}
+
+.mean-actions {
+    float: right;
+    position: relative;
+    margin-left: 1.5rem;
+}
+
+.mean-actions li {
+    display: inline;
+}
+
+.mean-actions li.complain {
+    padding-right: 0.625rem;
+    border-right: 1px solid #e1e5eb;
+
+}
+
+.mean-actions li.reply {
+    padding-left: 0.625rem;
+}
+
+.mean-block .img {
+    width: 190px;
+}
+
+.mean-block .img img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 3px auto;
+}
+
+.mean-block .name {
+    width: 50px;
+}
+
+.mean-block .name span {
+    line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.mean-block .price {
+    width: 144px;
+    text-align: right;
+    padding-right: 84px;
+}
+
+.mean-block .price span {
+    color: #ff6700;
+    font-size: 16px;
+}
+
+.mean-block .number {
+    width: 150px;
+}
+
+.mean-block .subtotal {
+    width: 130px;
+
+}
+
+.mean-block .ctrl {
+    width: 105px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+.mean-block .ctrl a {
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin: 30px auto;
+    line-height: 26px;
+}
+
+.mean-block .ctrl a:hover {
+    color: #FFF;
+    background: #ff6700;
+    border-radius: 50%;
+}
+
+.mean-block {
+    width: 1240px;
+    margin: 20px auto;
+    background: #FFF;
+}
+
+.mean-block .check {
+    width: 50px;
+
+}
+
+.mean-block .check i {
+    color: #fff;
+    display: inline-block;
+
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #e0e0e0;
+    margin-left: 24px;
+    background-color: #fff;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+    font-family: "iconfont";
+}
+
+.mean-sum {
+    float: right;
+    position: relative;
+}
+
+.complain {
+    color: #cacaca;
+    cursor: pointer;
+}
+.complain:hover {
+    text-decoration: underline;
+    color: #ce3030;
+    cursor: pointer;
+}
+
+.head_row {
+    height: 70px;
+    line-height: 70px;
+}
+.head_row, .row {
+    border-bottom: solid 1px #e0e0e0;
+}
+.row {
+    height: 86px;
+    line-height:86px;
+    padding: 15px 0;
+    margin: 0px;
+}
+.img{
+    text-align: center;
+}
+.bottom-mean{
+    line-height:36px;
+}
+.mean-date{
+    padding-left:40px;
+    /* transform:translate(20,0); */
+}

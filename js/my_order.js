@@ -60,9 +60,9 @@ window.onload = function () {
             "proComm": "7.2"
         }
     ];
-    this.console.log(aData);
+
     var oCar = document.getElementById("means");
-    for (var j = 0;j<100; j++) {
+    for (var j = 0; j < 100; j++) {
         strJson = localStorage.getItem("allMean" + j);
         if (strJson == null) {
             continue;
@@ -99,15 +99,15 @@ window.onload = function () {
             rawJson = JSON.parse('{' + strJsonArr[i]);
 
             var index = 0;
-            this.console.log(aData.length);
-            this.console.log(rawJson.name);
+
+
             for (; index < aData.length; index++) {
                 if (aData[index].proName.replace(/\s*/g, "") == rawJson.name) break;
             }
-            this.console.log("index" + index);
+
             var data = aData[index];
             var oDiv = document.createElement("div");
-            this.console.log(data);
+
             oDiv.className = "row hid";
             oDiv.innerHTML += '<div class="img left"><img src="./' + data.imgUrl + '" width="80" height="80"></div>';
             oDiv.innerHTML += '<div class="name left"><span>' + data.proName + "</span></div>";
@@ -123,28 +123,33 @@ window.onload = function () {
 
         var oDiv = document.createElement("div");
         oDiv.className = "bottom-mean";
-        oDiv.id="delBut"+j;
-        oDiv.innerHTML += '<div class="mean-date">' + '订单日期：'+rawJson.data + '</div>';
-        oDiv.innerHTML += '<ul class="mean-actions"><button class="complain">删除订单</button></ul></div>';
-        oDiv.innerHTML += '<div class="mean-sum">' + '订单总价：'+numPrice + '</div>';
-        
+        oDiv.innerHTML += '<div class="mean-date">' + '订单日期：' + rawJson.data + '</div>';
+        var oA = this.document.createElement("a");
+        oA.innerHTML += '<a class="complain">删除订单</a>';
+        oA.id = "delBut" + j;
+        oDiv.innerHTML += '<ul class="mean-actions"></ul></div>';
+        oDiv.innerHTML += '<div class="mean-sum">' + '订单总价：' + numPrice + '</div>';
+
 
         oMeanBlock.appendChild(oDiv);
+        var tempDiv = oDiv.getElementsByClassName("mean-actions")[0];
+
+        tempDiv.appendChild(oA);
+        delete(tempDiv);
 
 
+        var delBtn = document.getElementById("delBut" + j);
 
-        var delBtn = document.getElementById("delBut"+j);
-        this.console.log("del:"+delBtn);
         delBtn.onclick = function () {
-            console.log(this.id);
+
             var result = confirm("确定删除吗?");
             if (result) {
-                localStorage.removeItem("allMean"+this.id[6]);
+                localStorage.removeItem("allMean" + this.id[6]);
                 alert("删除成功");
                 window.location.reload();
             }
-            
-            
+
+
         }
 
 
